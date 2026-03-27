@@ -49,11 +49,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("⏳ جاري التحميل...")
 
     try:
-        ydl_opts = {
-          'format': 'bestvideo+bestaudio/best',
-'merge_output_format': 'mp4'
-            'outtmpl': 'video.%(ext)s'
-        }
+          ydl_opts = {
+    'format': 'bestvideo+bestaudio/best',
+    'merge_output_format': 'mp4',
+    'outtmpl': 'video.%(ext)s',
+}
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
