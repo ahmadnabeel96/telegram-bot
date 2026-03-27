@@ -55,8 +55,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             'outtmpl': 'video.%(ext)s',
     }
 
-   with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        ydl.download([url])
+       with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+           ydl.download([url])
 
         await update.message.reply_video(video=open("video.mp4", "rb"))
 
