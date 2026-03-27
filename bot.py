@@ -50,7 +50,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     try:
         ydl_opts = {
-            'format': 'mp4',
+          'format': 'bestvideo+bestaudio/best',
+'merge_output_format': 'mp4'
             'outtmpl': 'video.%(ext)s'
         }
 
