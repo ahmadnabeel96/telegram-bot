@@ -48,19 +48,19 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     url = update.message.text
     await update.message.reply_text("⏳ جاري التحميل...")
 
-    try:
+   try:
         ydl_opts = {
             'format': 'bestvideo+bestaudio/best',
             'merge_output_format': 'mp4',
             'outtmpl': 'video.%(ext)s',
-    }
+        }
 
-       with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-           ydl.download([url])
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([url])
 
         await update.message.reply_video(video=open("video.mp4", "rb"))
 
-except:
+    except:
         await update.message.reply_text("❌ الرابط غير صالح")
 
 app = ApplicationBuilder().token(TOKEN).build()
