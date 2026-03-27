@@ -53,6 +53,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             'format': 'best',
             'merge_output_format': 'mp4',
             'outtmpl': '%(id)s.%(ext)s',
+            'noplaylist': True,
+            'quiet': True,
 
         }
 
