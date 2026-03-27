@@ -52,7 +52,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ydl_opts = {
             'format': 'best',
             'merge_output_format': 'mp4',
-            'outtmpl': 'video.%(ext)s',
+            'outtmpl': '%(id)s.%(ext)s',
+
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
