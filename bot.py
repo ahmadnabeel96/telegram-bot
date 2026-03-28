@@ -4,7 +4,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
 
 TOKEN = "8432285867:AAFmaVLrp3XKfMoX8G88tFMCeE5za0SkCqI"
-CHANNEL = "Quote0me"
+CHANNEL = "@Quote0me"
 
 user_links = {}
 
